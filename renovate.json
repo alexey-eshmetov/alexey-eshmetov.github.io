@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+
+  "timezone": "Asia/Tokyo",
+
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5,
+  "rebaseWhen": "behind-base-branch",
+
+  "labels": ["dependencies"],
+
+  "enabledManagers": [
+    "git-submodules",
+    "github-actions"
+  ],
+
+  "dependencyDashboard": false,
+
+  "packageRules": [
+    {
+      "description": "Auto-merge safe updates (minor/patch) for Actions and git submodules (PaperMod)",
+      "matchManagers": ["github-actions", "git-submodules"],
+      "matchUpdateTypes": ["minor", "patch", "digest", "pin"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Do NOT automerge major updates",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}
