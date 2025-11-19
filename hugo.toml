@@ -1,0 +1,12 @@
+baseURL = 'https://alexey-eshmetov.github.io/'
+languageCode = 'en-us'
+title = 'Alexey Eshmetov Blog'
+theme = 'PaperMod'
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[params]
+  defaultTheme = "auto"
+  ShowCodeCopyButtons = true
