@@ -3,7 +3,7 @@ title: "My First Test Post"
 date: 2025-11-19
 draft: false
 cover:
-    image: "my-cat.jpg
+    image: "my-cat.jpg"
     relative: true
 ---
 
